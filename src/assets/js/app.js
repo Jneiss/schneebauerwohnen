@@ -24,11 +24,11 @@ $('.top-bar-title').on('click','a',function(){
 
 function ready() {
     var box = document.getElementById('sticky-bar');
-    var top = $(box).offset().top;
+    var top = 0;
     function scroll(event) {
         var y = document['documentElement' || 'body'].scrollTop;
 
-        if (y >= top) box.classList.add('shrink');
+        if (y > top) box.classList.add('shrink');
         else box.classList.remove('shrink');
 
     }
